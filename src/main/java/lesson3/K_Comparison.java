@@ -10,6 +10,11 @@ public class K_Comparison {
         System.out.println(a >= b);
         System.out.println(a <= b);
         System.out.println(b == c);
+        //a = b;
         System.out.println(b != c);
+        System.out.println("--------------------------");
+        //System.out.println(!!true);
+        boolean isTrue = a < b;
+        System.out.println(isTrue);
     }
 }
