@@ -1,4 +1,4 @@
-package lesson3;
+package main.java.lesson3;
 
 public class HW_addvance {
     public static void main(String[] args) {

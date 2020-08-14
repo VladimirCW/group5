@@ -1,4 +1,4 @@
-package lesson3;
+package main.java.lesson3;
 
 public class W_String_methods {
     public static void main(String[] args) {

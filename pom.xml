@@ -13,6 +13,7 @@
     </properties>
 
     <build>
+        <sourceDirectory>src</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -46,8 +47,15 @@
             <version>7.3.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8</version>
+            <scope>compile</scope>
+        </dependency>
 
     </dependencies>
+
 
 
 </project>

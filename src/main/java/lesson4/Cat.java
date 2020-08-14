@@ -1,4 +1,4 @@
-package lesson4;
+package main.java.lesson4;
 
 public class Cat {
     private int age = 20;

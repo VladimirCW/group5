@@ -1,4 +1,6 @@
-package lesson4;
+package test.java.lesson4;
+
+import main.java.lesson4.Cat;
 
 public class TestCat {
     public static void main(String[] args) {

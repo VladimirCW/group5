@@ -1,4 +1,4 @@
-package lesson3;
+package main.java.lesson3;
 
 public class U_Methods {
     public static void main(String[] args) {

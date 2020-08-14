@@ -1,6 +1,4 @@
-package lesson4;
-
-import lesson4.Cat;
+package main.java.lesson4;
 
 public class A_Objects {
     public static void main(String[] args) {
