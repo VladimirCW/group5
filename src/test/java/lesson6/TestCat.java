@@ -14,6 +14,7 @@ public class TestCat {
         cat.setAge(ageToChange);
         int actualAge = cat.getAge();
         int expectedAge = ageToChange;
-        assertEquals(actualAge, expectedAge);
+        //assertEquals(actualAge, expectedAge);
+        assertEquals(actualAge, 0, String.format("Expected cat age to be '%d'", expectedAge));
     }
 }
