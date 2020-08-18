@@ -8,7 +8,7 @@ public class Task1 {
         //System.out.println(min(5,2,3));
     }
 
-    public static int min(int arr[]) {
+    public int min(int arr[]) {
         int minimum = arr[0];
         for (int el: arr) {
             minimum = minimum < el ? minimum : el;
