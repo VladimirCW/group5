@@ -26,7 +26,7 @@ public class A_RunBrowser {
         /*By city4 = By.id("someId");
         By city5 = By.cssSelector("#someId");*/
 
-        Thread.sleep(5000);
+        Thread.sleep(10000);
         //String cityValue = driver.findElement(city).getText(); //1 option
         /*WebElement cityEl = driver.findElement(city); //2 option
         String cityValue = cityEl.getText();*/
