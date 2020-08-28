@@ -12,4 +12,9 @@ public class Cat extends Animal{
         String temp = super.toString();
         return temp + " Cat";
     }
+
+    @Override
+    public String getName() {
+        return "Cat";
+    }
 }

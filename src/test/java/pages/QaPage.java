@@ -8,14 +8,19 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class QaPage {
+public class QaPage extends BasePage {
     WebDriver driver;
-    WebDriverWait wait;
     By questionsBy = By.cssSelector("[name='slider-block-active']");
 
     public QaPage(WebDriver driver) {
+        super(driver);
         this.driver = driver;
-        wait = new WebDriverWait(driver, 10, 500);
+    }
+
+    @Override
+    public QaPage open() {
+        driver.get("https://rozetka.com.ua/faq/");
+        return this;
     }
 
     public List<WebElement> getQuestion() {

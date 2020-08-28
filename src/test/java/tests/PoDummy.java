@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import test.java.pages.BasePage;
 import test.java.pages.ContactPage;
 import test.java.pages.HomePage;
 import test.java.pages.QaPage;
@@ -18,21 +19,14 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
 
-public class PoDummy {
+public class PoDummy extends TestBaseSetup{
     String expectedFontColor = "rgba(62, 119, 170, 1)";
-    WebDriver driver;
     HomePage homePage;
     ContactPage contactPage;
     QaPage qaPage;
 
     @BeforeMethod
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notifications");
-        driver = new ChromeDriver(options);
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(1, TimeUnit.MILLISECONDS);
         homePage = new HomePage(driver);
         contactPage = new ContactPage(driver);
         qaPage = new QaPage(driver);
@@ -53,11 +47,6 @@ public class PoDummy {
                     String.format("Expected blue color for questuion '%s'", question.getText())
             );
         }
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        driver.quit();
     }
 
     public Object[][] dp() {
