@@ -17,7 +17,7 @@ public class DummyTest2 extends TestBaseSetup{
     ContactPage contactPage;
 
     @BeforeMethod
-    public void setUp() {
+    public void pageFactory() {
         homePage = new HomePage(driver);
         contactPage = new ContactPage(driver);
     }
