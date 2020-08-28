@@ -45,7 +45,7 @@ public class PoDummy {
                 .clickContacts();
         contactPage.clickQa();
         List<WebElement> questions = qaPage.getQuestion();
-        for (WebElement question: questions) {
+        for (WebElement question : questions) {
             String actualFontColor = question.getCssValue("color");
             assertEquals(
                     actualFontColor,
@@ -58,5 +58,11 @@ public class PoDummy {
     @AfterMethod
     public void tearDown() {
         driver.quit();
+    }
+
+    public Object[][] dp() {
+        return new Object[][]{
+                {"Acer" }, {"Apple" }, {"Asus" }, {"Dell" }, {"Dream Machines" }, {"HP" }, {"Huawei" }, {"Lenovo" }, {"MSI" }, {"Microsoft" }, {"Razer" }, {"Xiaomi" }, {"Alien" }, {"Chuwi" }, {"Compaq" }, {"Digma" }, {"Durabook" }, {"Epic" }, {"Fujitsu" }, {"Fujitsu-siemens" }, {"Gigabyte" }, {"Google" }, {"Jumper" }, {"Mediacom" }, {"Medion" }, {"Mixzo" }, {"NuVision" }, {"Odys" }, {"Panasonic" }, {"Porsche Design" }, {"Prestigio" }, {"RCA" }, {"Teclast" }, {"Toshiba" }, {"Vinga" }, {"Yepo" }
+        };
     }
 }
