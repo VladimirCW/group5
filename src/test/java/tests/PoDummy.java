@@ -37,6 +37,9 @@ public class PoDummy extends TestBaseSetup{
         homePage
                 .open()
                 .clickContacts();
+        homePage
+                .open()
+                .clickContacts();
         contactPage.clickQa();
         List<WebElement> questions = qaPage.getQuestion();
         for (WebElement question : questions) {
