@@ -16,5 +16,7 @@ public class Main {
         Animal one = new Cat();
         //Cat cat4 = new Animal();
         Cat cat5 = (Cat)one;
+
+        System.out.println(System.getProperty("os.name"));
     }
 }
