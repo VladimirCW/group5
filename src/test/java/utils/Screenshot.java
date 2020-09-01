@@ -19,14 +19,19 @@ public class Screenshot {
     }
 
     public void makeScreenshot(ITestResult result) {
+        Path currentRelativePath = Paths.get("");
+        System.out.println("PATH = " + currentRelativePath.toAbsolutePath().toString()
+                + "\\screenshots\\"
+                + result.getTestClass().getName().replace(".", "\\\\") + "\\"
+                + result.getMethod().getConstructorOrMethod().getName()
+                + ".png");
         TakesScreenshot screenshot = (TakesScreenshot) driver;
         File src = screenshot.getScreenshotAs(OutputType.FILE);
-        Path currentRelativePath = Paths.get("");
         try {
             FileUtils.copyFile(src, new File(
                     currentRelativePath.toAbsolutePath().toString()
                             + "\\screenshots\\"
-                            + result.getTestClass().getName().replace(".", "\\\\") + "\\"
+                            + result.getTestClass().getName().replace(".", "\\") + "\\"
                             + result.getMethod().getConstructorOrMethod().getName()
                             + ".png"
             ));

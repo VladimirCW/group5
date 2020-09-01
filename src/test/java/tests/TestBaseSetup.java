@@ -18,19 +18,18 @@ public class TestBaseSetup {
     WebDriver driver;
 
     @BeforeMethod
-    public void setUp() {
+    public void setUp(ITestContext testContext) {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(1, TimeUnit.MILLISECONDS);
+        testContext.setAttribute("driver", driver);
     }
 
     @AfterMethod
-    public void tearDown(ITestResult result) {
-        Screenshot screenshot = new Screenshot(driver);
-        screenshot.makeScreenshot(result);
+    public void tearDown() {
         driver.quit();
     }
 }

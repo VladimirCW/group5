@@ -85,6 +85,8 @@ public class Waits {
             }
         });
 
+
+
         //new WebDriverWait(driver, 15).until(d -> d.findElement(errorMsgBy).getText().contains("Пользователь с логином"));
 
 
