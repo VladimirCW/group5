@@ -13,6 +13,7 @@ import test.java.pages.BasePage;
 import test.java.pages.ContactPage;
 import test.java.pages.HomePage;
 import test.java.pages.QaPage;
+import test.java.utils.Screenshot;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -35,9 +36,9 @@ public class PoDummy extends TestBaseSetup{
     @Test
     public void test1() {
         homePage
-                .open()
-                .clickContacts();
-        homePage
+                .open();
+                //.clickContacts();
+        /*homePage
                 .open()
                 .clickContacts();
         contactPage.clickQa();
@@ -49,7 +50,7 @@ public class PoDummy extends TestBaseSetup{
                     expectedFontColor,
                     String.format("Expected blue color for questuion '%s'", question.getText())
             );
-        }
+        }*/
     }
 
     public Object[][] dp() {
