@@ -13,8 +13,8 @@ import java.nio.file.Paths;
 import java.util.Date;
 
 public class Screenshot {
-    private String delimiter = System.getProperty("os.name").toLowerCase().contains("windows") ? "\\" : "/";
-    private WebDriver driver;
+    private final String delimiter = System.getProperty("os.name").toLowerCase().contains("windows") ? "\\" : "/";
+    private final WebDriver driver;
 
     public Screenshot(WebDriver driver) {
         this.driver = driver;
