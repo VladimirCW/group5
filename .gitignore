@@ -4,3 +4,4 @@ target/
 *.exe
 logs/
 screenshots/
+src/test/resources/secure-config.properties

@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-
+import test.java.utils.PropertyLoader;
 
 
 public class HomePage extends BasePage {
@@ -34,7 +34,7 @@ public class HomePage extends BasePage {
                 "age: 20\n" +
                 "}\n" +
                 "]\n");
-        driver.get("https://rozetka.com.ua/");
+        driver.get(PropertyLoader.loadProperty("baseurl"));
         return this;
     }
 
