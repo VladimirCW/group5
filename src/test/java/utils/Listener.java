@@ -7,12 +7,12 @@ public class Listener implements ISuiteListener, ITestListener, IInvokedMethodLi
 
     @Override
     public void beforeInvocation(IInvokedMethod iInvokedMethod, ITestResult iTestResult) {
-        System.out.println("Start Invoked " + iInvokedMethod.getTestMethod().getMethodName());
+        //System.out.println("Start Invoked " + iInvokedMethod.getTestMethod().getMethodName());
     }
 
     @Override
     public void afterInvocation(IInvokedMethod iInvokedMethod, ITestResult iTestResult) {
-        System.out.println("Stop Invoked " + iInvokedMethod.getTestMethod().getMethodName());
+        //System.out.println("Stop Invoked " + iInvokedMethod.getTestMethod().getMethodName());
     }
 
     @Override
@@ -27,12 +27,12 @@ public class Listener implements ISuiteListener, ITestListener, IInvokedMethodLi
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        System.out.println(" ---- TEst started");
+        //System.out.println(" ---- TEst started");
     }
 
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
-        System.out.println("Test finished successfuly");
+        //System.out.println("Test finished successfuly");
     }
 
     @Override
@@ -56,11 +56,11 @@ public class Listener implements ISuiteListener, ITestListener, IInvokedMethodLi
 
     @Override
     public void onStart(ITestContext iTestContext) {
-        System.out.println("Test was started");
+        //System.out.println("Test was started");
     }
 
     @Override
     public void onFinish(ITestContext iTestContext) {
-        System.out.println("Test was finished");
+        //System.out.println("Test was finished");
     }
 }

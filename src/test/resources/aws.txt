@@ -1,0 +1,10 @@
+docker run -it --rm ubuntu bash
+sudo apt update
+#sudo apt install docker
+#sudo apt  install docker.io -y
+#sudo apt install docker-compose -y
+sudo apt install curl
+curl -LO https://raw.githubusercontent.com/VladimirCW/docker-files/master/seleniumGrid.yml
+sudo docker-compose -f seleniumGrid.yml up -d
+sudo docker-compose -f seleniumGrid.yml scale chrome=2
+sudo docker-compose -f seleniumGrid.yml down

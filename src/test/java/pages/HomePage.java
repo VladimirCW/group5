@@ -35,6 +35,11 @@ public class HomePage extends BasePage {
                 "}\n" +
                 "]\n");
         driver.get(PropertyLoader.loadProperty("baseurl"));
+        try {
+            Thread.sleep(7000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return this;
     }
 
