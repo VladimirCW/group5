@@ -53,7 +53,14 @@
                         <version>${aspectj.version}</version>
                     </dependency>
                 </dependencies>
-
+            </plugin>
+            <plugin>
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <configuration>
+                    <resultsDirectory>${project.basedir}/allure-result</resultsDirectory>
+                    <reportDirectory>${project.basedir}/allure-report</reportDirectory>
+                </configuration>
             </plugin>
         </plugins>
     </build>
