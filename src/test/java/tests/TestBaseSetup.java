@@ -28,7 +28,9 @@ public class TestBaseSetup {
         //FirefoxOptions ffOptions = new FirefoxOptions();
         //driver = new ChromeDriver(options);
         try {
-            driver = new RemoteWebDriver(new URL("http://ec2-3-131-141-137.us-east-2.compute.amazonaws.com:4444/wd/hub"), options);
+            driver = new RemoteWebDriver(new URL("http://ec2-18-188-168-196.us-east-2.compute.amazonaws.com:4444/wd/hub"), options);
+            //driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), options);
+            //driver = new RemoteWebDriver(new URL("localhost:4444/wd/hub"), options);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
