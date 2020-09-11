@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
 
 @Epic("Epic first")
 @Feature("First feature")
@@ -67,6 +68,7 @@ public class PoDummy extends TestBaseSetup{
                     String.format("Expected blue color for questuion '%s'", question.getText())
             );
         }*/
+        assertTrue(false);
     }
 
     public Object[][] dp() {

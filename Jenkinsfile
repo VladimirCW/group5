@@ -22,8 +22,10 @@ pipeline {
                 echo 'Deployed'
             }
         }
-        stage("Report") {
-            steps {
+    }
+    post {
+        always{
+            script{
                 allure([
                     includeProperties: false,
                     jdk: '',
