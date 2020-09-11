@@ -5,7 +5,7 @@
         <listener class-name="test.java.utils.AnnotationTransformer"/>
     </listeners>
     <test name="FirstTest">
-        <parameter name="browser" value="ff"/>
+        <!--<parameter name="browser" value="ff"/>-->
         <classes>
             <class name="test.java.tests.PoDummy"/>
             <class name="test.java.tests.DummyTest2"/>
