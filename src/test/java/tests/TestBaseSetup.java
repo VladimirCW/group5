@@ -12,6 +12,8 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 import test.java.pages.ContactPage;
 import test.java.pages.HomePage;
 import test.java.pages.QaPage;
@@ -24,16 +26,22 @@ import java.util.concurrent.TimeUnit;
 public class TestBaseSetup {
     WebDriver driver;
 
+    @Parameters({ "browser" })
     @BeforeMethod
-    public void setUp() {
+    public void setUp(@Optional("chrome") String browser) {
         System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notifications");
-        //FirefoxOptions ffOptions = new FirefoxOptions();
+        ChromeOptions optionsChrome = new ChromeOptions();
+        optionsChrome.addArguments("--disable-notifications");
+        FirefoxOptions ffOptions = new FirefoxOptions();
         //driver = new ChromeDriver(options);
         try {
             //driver = new RemoteWebDriver(new URL("http://ec2-18-188-168-196.us-east-2.compute.amazonaws.com:4444/wd/hub"), options);
-            driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), options);
+            if(browser.equals("chrome")) {
+                driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), optionsChrome);
+            } else if(browser.equals("ff")) {
+                driver = new RemoteWebDriver(new URL("http://127.0.0.1:4444/wd/hub"), ffOptions);
+            }
+
             //driver = new RemoteWebDriver(new URL("localhost:4444/wd/hub"), options);
         } catch (MalformedURLException e) {
             e.printStackTrace();

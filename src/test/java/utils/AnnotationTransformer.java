@@ -11,4 +11,9 @@ public class AnnotationTransformer implements IAnnotationTransformer {
     public void transform(ITestAnnotation iTestAnnotation, Class aClass, Constructor constructor, Method method) {
         iTestAnnotation.setRetryAnalyzer(RetryAnalyzer.class);
     }
+
+    /*public void transform(ITestAnnotation iTestAnnotation, Class aClass, Constructor constructor, Method method) {
+        iTestAnnotation.setDataProvider("dp1");
+        iTestAnnotation.setDataProviderClass(DataProviders.class);
+    }*/
 }

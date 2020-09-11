@@ -1,5 +1,6 @@
 package test.java.tests;
 
+import com.beust.jcommander.Parameter;
 import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,6 +15,7 @@ import test.java.pages.BasePage;
 import test.java.pages.ContactPage;
 import test.java.pages.HomePage;
 import test.java.pages.QaPage;
+import test.java.utils.DataProviders;
 import test.java.utils.Screenshot;
 
 import java.util.List;
