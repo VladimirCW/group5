@@ -47,6 +47,10 @@ public class PoDummy extends TestBaseSetup{
     @Severity(SeverityLevel.CRITICAL)
     @Test
     public void test1() {
+
+//        int i = 1;
+//        String a = Integer.toString(i); // "1"
+
         homePage
                 .open();
                 //.clickContacts();
