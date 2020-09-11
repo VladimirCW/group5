@@ -22,5 +22,16 @@ pipeline {
                 echo 'Deployed'
             }
         }
+        stage("Report") {
+            steps {
+                allure([
+                    includeProperties: false,
+                    jdk: '',
+                    properties: [],
+                    reportBuildPolicy: 'ALWAYS',
+                    results: [[path: 'allure-results']]
+                ])
+            }
+        }
     }
 }
