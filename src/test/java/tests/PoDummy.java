@@ -1,5 +1,6 @@
 package test.java.tests;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,6 +21,8 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.Assert.assertEquals;
 
+@Epic("Epic first")
+@Feature("First feature")
 public class PoDummy extends TestBaseSetup{
     String expectedFontColor = "rgba(62, 119, 170, 1)";
     HomePage homePage;
@@ -33,6 +36,13 @@ public class PoDummy extends TestBaseSetup{
         qaPage = new QaPage(driver);
     }
 
+
+    @Story("BBB-1")
+    @Stories({
+           @Story("BBB-1-1"),
+           @Story("BBB-1-2")
+    })
+    @Severity(SeverityLevel.CRITICAL)
     @Test
     public void test1() {
         homePage
