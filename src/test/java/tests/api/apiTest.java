@@ -19,7 +19,7 @@ public class apiTest {
                 "\"shared\": false" +
                 "}";*/
 
-        /*HashMap<String, Object> bodyAsMap = new HashMap<>();
+        /*HashMap<String, Object> bodyAsMap = new HashMap<>();getAllProjects
         bodyAsMap.put("name", "Movies to watchSS");
         bodyAsMap.put("color", 48);
         bodyAsMap.put("shared", false);*/

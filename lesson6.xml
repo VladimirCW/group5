@@ -3,13 +3,21 @@
     <!--<parameter name="age" value="50"></parameter>
     <parameter name="salary" value="1000"></parameter>-->
     <test name="FirstTest">
-        <classes>
-            <class name="test.java.lesson6.TestCat">
-                <!--<methods>
+        <groups>
+            <run>
+                <include name="getMatrix"/>
+            </run>
+        </groups>
+        <packages>
+            <package name="test.java.lesson6"/>
+        </packages>
+        <!--<classes>
+            <class name="test.java.lesson6.TestCat"/>
+            <class name="test.java.lesson6.TestCat2"/>
+                &lt;!&ndash;<methods>
                     <include name="testGetAge"></include>
                     &lt;!&ndash;<exclude name="testGetAge"></exclude>&ndash;&gt;
-                </methods>-->
-            </class>
-        </classes>
+                </methods>&ndash;&gt;
+        </classes>-->
     </test>
 </suite>

@@ -3,3 +3,6 @@ access modifiers:
  - private
  - protected
  - default (package-default)
+
+
+ mvn clean -DsuiteXmlFile=lesson6.xml -Dtest=TestCat#testGetAge test
